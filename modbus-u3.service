@@ -1,0 +1,11 @@
+[Unit]
+Description=DIELTECH LabJack U3 native UD Modbus gateway
+After=network.target
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/modbus_u3_server
+Restart=on-failure
+RestartSec=3
+User=root
+[Install]
+WantedBy=multi-user.target
